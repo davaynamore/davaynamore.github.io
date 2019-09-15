@@ -1,3 +1,48 @@
-body {
+* {
 	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 100%;
+	font-family: sans-serif;
+}
+
+li {
+	display:  inline-block;
+}
+
+a {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	min-width: 300px;
+	border: 10px solid yellow;
+	border-radius: 5px;
+	background-color: yellow;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	font-weight: bold;
+	font-size: 2rem;
+	text-decoration: none;
+	color: #000;
+	box-shadow: 2px 2px 17px black;
+	transition: all .5s ease;
+}
+
+a:hover {
+	background-color: orange;
+	color: red;
+	border-color: currentcolor;
+}
+
+
+ul {
+	display:  inline-block;
+}
+
+nav {
+	text-align: center;
+	padding-top: 1rem;
 }
