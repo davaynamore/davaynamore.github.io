@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-size: 100%;
+	font-family: sans-serif;
+	color:  black;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	margin-bottom: 2rem;
+}
+
+.form__list {
+	list-style: none;
+}
+
+.form__list-item
+
+.form__label {
+	padding: 10px;
+	display: block;
+	background-color: blue;
+}
+
+.form__list-item:nth-child(odd) .form__label {
+	background-color: green;
+}
+
+.form__check {
+	display: none;
+}
+
+.form__text {
+	color: white;
+	font-size: 2rem;
+	position: relative;
+	display: inline-block;
+}
+
+.form__check:checked ~ .form__text::before {
+	content: "";
+	display: block;
+	width: 100%;
+	border-top: 3px solid currentcolor;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.form__label a {
+	color:  white;
+}
+
+.form__label > a {
+	color: initial;
+}
+
+.fake-label {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border-radius: 5px;
+	background-color: white;
+	margin-right: 1rem;
+	transition: all .3s ease;
+}
+
+.form__check:checked + .fake-label {
+	border-radius: 50%;
+	background-color: red;
+}
+
+
+a:link {
+	color: red;
+}
+
+a:hover {
+	color: yellow;
+}
+
+a:active {
+	color: green;
+}
+
+a:focus {
+	color: black;
+}
+
+a:visited {
+	color: violet;
+}
+
+.target {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: black;
+
+
+	box-shadow: 0 0 0 40px red,
+	0 0 0 50px black,
+	0 0 0 90px blue,
+	0 0 0 100px black,
+	0 0 0 140px green,
+	0 0 0 150px black,
+	0 0 0 190px yellow,
+	0 0 0 200px black;
+
+	position: relative;
+}
+
