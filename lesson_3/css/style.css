@@ -1,3 +1,20 @@
+/* @import url('https://fonts.googleapis.com/css?family=Be+Vietnam:400,700|Roboto&display=swap'); */
+
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+	font-family: 'Be Vietnam';
+	src: url("../fonts/Be_Vietnam/BeVietnam-Regular.ttf");
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -11,7 +28,10 @@ html, body {
 body {
 	font-size: 100%;
 	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color:  black;
+	background-color: black;
+	color:  white;
 }
 
 .container {
@@ -24,6 +44,11 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+h1 {
+	font-family: 'Be Vietnam', sans-serif;
+	font-size:  6rem;
 }
 
 .form {
@@ -131,3 +156,6 @@ a:visited {
 	position: relative;
 }
 
+span {
+	font-size: 4rem;
+}
