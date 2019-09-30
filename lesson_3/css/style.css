@@ -29,9 +29,6 @@ body {
 	font-size: 100%;
 	font-family: sans-serif;
 	font-family: 'Roboto', sans-serif;
-	color:  black;
-	background-color: black;
-	color:  white;
 }
 
 .container {
@@ -42,7 +39,8 @@ body {
 	height: 100%;
 
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	/* justify-content: center; */
 	align-items: center;
 }
 
@@ -52,7 +50,8 @@ h1 {
 }
 
 .form {
-	margin-bottom: 2rem;
+	margin-bottom: 20rem;
+	width: 100%;
 }
 
 .form__list {
@@ -65,6 +64,7 @@ h1 {
 	padding: 10px;
 	display: block;
 	background-color: blue;
+	cursor: pointer;
 }
 
 .form__list-item:nth-child(odd) .form__label {
