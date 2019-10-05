@@ -1,0 +1,14 @@
+section {
+	padding: 50px 0;
+}
+section nav {
+	background-color: green;
+}
+section ul {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDQyxlQUFlLEVBQUE7RUFEaEI7SUFJRSx1QkFBdUIsRUFBQTtFQUp6QjtJQVFFLG9CQUFhO0lBQWIscUJBQWE7SUFBYixvQkFBYTtJQUFiLGFBQWEsRUFBQSIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJzZWN0aW9uIHtcclxuXHRwYWRkaW5nOiA1MHB4IDA7XHJcblxyXG5cdG5hdiB7XHJcblx0XHRiYWNrZ3JvdW5kLWNvbG9yOiBncmVlbjtcclxuXHR9XHJcblxyXG5cdHVsIHtcclxuXHRcdGRpc3BsYXk6IGZsZXg7XHJcblx0XHRcclxuXHR9XHJcbn0iXX0= */
