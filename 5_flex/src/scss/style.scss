@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all .3s ease;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-size: 100%;
+	font-family: sans-serif;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	width: 100%;
+}
+
+.coffee {
+	background-color: #fdde7e;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.coffee__list {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items:  center;
+}
+
+.coffee__link {
+	background-color: #fff;
+	color: #333;
+	text-decoration: none;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	min-height: 440px;
+	border-radius:  5px;
+	box-shadow: 3px 3px 10px 0 rgba(0,0,0,.5);
+}
+
+.coffee__link.gold {
+	min-height: 500px;
+}
+
+/*
+#fdde7e - yellow
+#333333 - black
+#02995b - green
+*/
+
+.coffee__price {
+	flex-grow: 1.5;
+
+	display: flex;
+	align-items: center;
+
+	color: #02995b;
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.coffee__image {
+	flex-grow: 0;
+}
+
+.coffee__title {
+	flex-grow: 1;
+
+	display: flex;
+	align-items: center;
+
+	font-size: 46px;
+	font-weight: 300;
+
+	text-transform: capitalize;
+}
+
+.coffee__description {
+	flex-grow: 1;
+
+	max-width: 70%;
+	text-align:  center;
+	line-height: 1.4;
+}

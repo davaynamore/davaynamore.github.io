@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-size: 100%;
+	font-family: sans-serif;
+	color:  black;
+	padding-top: 20px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	text-transform: capitalize;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	text-transform: capitalize;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	text-transform: capitalize;
+}
+:-moz-placeholder { /* Firefox 18- */
+	text-transform: capitalize;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.reg-form {
+	min-width: 290px;
+	max-width: 500px;
+	margin: 0 auto;
+	border: 2px solid #000;
+	border-radius: 7px;
+	padding: 20px;
+}
+
+.reg-form__label,
+.reg-form__input {
+	display: block;
+}
+
+.reg-form__input {
+	padding: 15px;
+	border-radius: 5px;
+	border: 1px solid #000;
+}
+
+.reg-form__label {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.reg-form__label:nth-last-child(2) {
+	font-size: .5rem;
+	display: flex;
+	align-items: center;
+}
+
+.reg-form__input:not([type="submit"]) {
+	width: 100%;
+}
+
+.reg-form__input[type="submit"] {
+	width: 50%;
+	margin: 0 auto;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.pass_span {
+	display: block;
+	margin-bottom: 10px;
+}
+
+[type="checkbox"] {
+	margin-right: 1rem;
+}
+
+.blue-text {
+	color: blue;
+}
+
+/* li {
+	display:  inline-block;
+}
+
+a {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	min-width: 300px;
+	border: 10px solid yellow;
+	border-radius: 5px;
+	background-color: yellow;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	font-weight: bold;
+	font-size: 2rem;
+	text-decoration: none;
+	color: #000;
+	box-shadow: 2px 2px 17px black;
+	transition: all .5s ease;
+}
+
+a:hover {
+	background-color: orange;
+	color: red;
+	border-color: currentcolor;
+}
+
+
+ul {
+	display:  inline-block;
+}
+
+nav {
+	text-align: center;
+	padding-top: 1rem;
+	} */
+
+
+.z-index {
+	$size: 200px;
+	width: $size;
+	height: $size;
+	background-color: green;
+	position: relative;
+
+	& > * {
+		$size: 100px;
+		position: absolute;
+		width: $size;
+		height: $size;
+	}
+
+	.index_1 {
+		background-color: red;
+		transform: translate(25px, 25px);
+	}
+
+	.index_2 {
+		background-color: blue;
+		transform: translate(50px, 50px);
+	}
+
+	.index_3 {
+		background-color: yellow;
+		transform: translate(75px, 75px);
+	}
+}
