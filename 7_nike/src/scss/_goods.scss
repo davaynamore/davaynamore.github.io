@@ -18,7 +18,7 @@
 		display: inline-flex;
 	}
 
-	&__form {
+	&__add-form {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
@@ -29,12 +29,21 @@
 
 .card {
 	display: flex;
+	text-transform: capitalize;
 
 	&__left {
-		padding-top: 60px;
+		padding: 60px 0 0 20px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	&__right {
+		padding: 15px 0 0 60px;
+
+		& > *:not(:last-child) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__img {
@@ -78,5 +87,98 @@
 		background-color: currentColor;
 	}
 
+	&__title {
+		font-size: 24px;
+		color: $light;
+		font-weight: 300;
+	}
 
+	&__subtitle {
+		font-size: 14px;
+		max-height: 20px;
+		overflow: hidden;
+	}
+}
+
+.rating {
+	display: flex;
+	list-style: none;
+
+	.fa-star {
+		@include square(12px);
+		fill: $star-grey;
+
+		&.active {
+			fill: $yellow;
+		}
+	}
+}
+
+.form {
+
+	& > *:not(:last-child) {
+		margin-bottom: 15px;
+	}
+
+	&__selects {
+		display: flex;
+	}
+
+	&__label {
+		display: flex;
+		width: 100%;
+		max-width: 70px;
+		margin-right: 2px;
+		position: relative;
+		color: $dark;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			@include square(8px);
+			border: 1px solid transparent;
+			border-bottom-color: currentcolor;
+			border-right-color: currentcolor;
+			top: 25%;
+			right: 15px;
+			transform-origin: center;
+			transform: rotate(45deg);
+			pointer-events: none;
+		}
+	}
+
+	&__field {
+		background-color: transparent;
+		appearance: none;
+		color: inherit;
+		text-transform: capitalize;
+		padding: 5px;
+		width: 100%;
+		display: inline-flex;
+		border: 1px solid currentcolor;
+
+		option {
+			background-color: $dark-blue;
+		}
+	}
+
+	&__submit {
+		display: block;
+		width: 100%;
+		padding: 5px 0;
+		text-align: center;
+		color: $dark;
+		border: 1px solid currentcolor;
+		background-color: $light-blue;
+		cursor: pointer;
+
+		&:hover {
+			background-color: lighten($light-blue, 10%);
+		}
+	}
 }

@@ -11,6 +11,7 @@ html, body {
 body {
 	color: $dark;
 	background-color: $dark-blue;
+	font-family: $main-font;
 
 	display: flex;
 	justify-content: center;
@@ -22,4 +23,12 @@ body {
 	max-width: 680px;
 	margin: auto;
 	padding: 0 15px;
+}
+
+.t-upper {
+	text-transform: uppercase;
+}
+
+.hidden {
+	display: block;
 }
