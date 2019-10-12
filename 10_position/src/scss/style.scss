@@ -1,0 +1,74 @@
+@import "sprite";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100vh;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 15px;
+}
+
+.cards {
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+
+	&__card {
+		width: 100%;
+		max-width: 300px;
+		position: relative;
+		display: flex;
+		transition: all .3s ease;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.social {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: aqua;
+	opacity: 0;
+	transition: all .3s ease;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: white;
+		font-size: 3rem;
+		font-weight: 800;
+		padding: 10px;
+
+		&:hover {
+			background-color: lighten(red, 10%);
+			// background-color: darken(aqua, 10%);
+		}
+	}
+}
