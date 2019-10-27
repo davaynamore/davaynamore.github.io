@@ -126,6 +126,19 @@ a:active {
 	text-transform: uppercase;
 }
 
+.t-caps {
+	text-transform: capitalize;
+}
+
+ .f-normal {
+ 	font-style: normal;
+ }
+
+ .hidden {
+ 	position: absolute;
+ 	opacity: 0;
+ }
+
 .sh-rating {
 	color: $yellow;
 	display: inline-flex;

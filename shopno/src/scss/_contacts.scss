@@ -1,0 +1,100 @@
+.sh-contacts {
+	position: relative;
+	@include layout {
+		background-image: url('../img/bg.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0 100%;
+		opacity: .2;
+	}
+
+	&__wrapper {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		justify-content: space-between;
+
+		& > * {
+			background-color: rgba($black, .7);
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		padding: 40px 30px;
+		width: 100%;
+		max-width: 55%;
+	}
+
+	&__field {
+		color: $white;
+		background: none;
+		border: none;
+		border-bottom: 1px solid rgba($white, .5);
+		padding: 10px 2px;
+		margin-bottom: 15px;
+		resize: none;
+		font-size: px_to_rem(18px);
+
+		&:nth-last-child(2) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__submit {
+		display: flex;
+		width: 100%;
+		max-width: 240px;
+		padding: 15px 40px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		background-color: $cyan-light;
+		color: $black;
+		font-family: $title-font;
+		font-size: px_to_rem(18px);
+		font-weight: 700;
+		border: none;
+		border-radius: 1px;
+	}
+
+	&__adresses {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 20px;
+		width: 100%;
+		max-width: 40%;
+		font-style: normal;
+	}
+
+	&__adresses-item {
+		display: flex;
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:nth-last-child(3) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__adresses-link {
+		color: $grey-text;
+	}
+
+	.t-caps {
+		margin-right: 10px;
+	}
+
+	&___map {
+		display: flex;
+
+		&-img {
+			width: 100%;
+		}
+		// align-self: flex-end;
+	}
+}
