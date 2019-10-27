@@ -1,3 +1,80 @@
 .sh-about {
-	background-color: $light-grey-bg;
+
+	&__carousel {
+		display: flex;
+	}
+
+}
+
+.sh-carousel {
+
+	&__slides {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__img {
+		z-index: 1;
+		box-shadow: 10px -2px 16px rgba($light-grey, .9),
+		-10px -2px 16px rgba($light-grey, .9);
+	}
+
+	&__bullets {
+		display: flex;
+		list-style: none;
+		width: 52px;
+		justify-content: space-between;
+
+		&-link {
+			display: flex;
+			@include square(10px);
+			border-radius: 3px;
+			background-color: $grey-bullets;
+
+			&.active, &:hover, &:focus {
+				background-color: $corp-cyan;
+			}
+		}
+	}
+
+	&__caption {
+
+		.sh-section__text-title {
+			margin-bottom: 20px;
+		}
+
+		.sh-section__text {
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+}
+
+.side {
+	flex-basis: 50%;
+}
+
+.img-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 390px;
+	margin-bottom: 40px;
+
+	@include padding-hack(485px);
+
+	&::before {
+		content: "";
+		width: 100%;
+		width: 470px;
+		height: 410px;
+		position: absolute;
+		background-color: $grey-bg;
+		z-index: 0;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }

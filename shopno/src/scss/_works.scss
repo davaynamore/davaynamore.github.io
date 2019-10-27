@@ -1,0 +1,50 @@
+.sh-works {
+	$transition:  all .3s ease;
+
+	&__gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 -15px;
+		height: 745px;
+	}
+
+	&__item {
+		width: 100%;
+		max-width: 370px;
+	}
+
+	&__link {
+		@include padding-hack(360px){
+			width: 100%;
+			overflow: hidden;
+			transition: $transition;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 0;
+				background-color: rgba($black, .5);
+				z-index: 1;
+			}
+		}
+
+		&:hover {
+			.sh-works__img {
+				transform: scale(1.1);
+			}
+
+			&::before {
+				width: 100%;
+				transition: $transition;
+			}
+		}
+	}
+
+	&__img {
+		transition: $transition;
+	}
+
+}
