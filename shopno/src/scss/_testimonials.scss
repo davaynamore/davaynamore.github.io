@@ -1,0 +1,42 @@
+.sh-testimonials {
+
+	.sh-carousel__caption {
+		position: relative;
+	}
+
+	.mate-wrapper {
+		position: relative;
+		transform: translateY(-47%);
+		top: 50%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.sh-team__mate {
+		position: initial;
+		opacity: 1;
+		background-color: $light-grey;
+		transform: initial;
+		top: initial;
+		left: initial;
+		max-width: initial;
+		height: 410px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 2rem;
+
+		&::before {
+			content: none;
+		}
+	}
+
+	.sh-team__mate-description {
+		text-align: center;
+	}
+
+	.sh-carousel__controls {
+		align-self: flex-end;
+	}
+}

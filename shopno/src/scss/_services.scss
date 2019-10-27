@@ -1,6 +1,10 @@
 .sh-services {
 	color: $white;
 
+	.sh-section__subtitle {
+		color: $text-dark;
+	}
+
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
@@ -58,7 +62,7 @@
 		background-color: $cyan-light;
 		padding: 65px;
 		z-index: 3;
-		transition: all .3s ease;
+		transition: $transition;
 	}
 
 	&:hover {

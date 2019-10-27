@@ -121,3 +121,82 @@ a:hover,
 a:active {
 	text-decoration: none;
 }
+
+.t-upper {
+	text-transform: uppercase;
+}
+
+.sh-rating {
+	color: $yellow;
+	display: inline-flex;
+	justify-content: space-between;
+	width: 115px;
+}
+
+.sh-carousel {
+
+	&__slides {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__img {
+		z-index: 1;
+		box-shadow: 10px -2px 16px rgba($light-grey, .9),
+		-10px -2px 16px rgba($light-grey, .9);
+	}
+
+	&__bullets {
+		display: flex;
+		list-style: none;
+		width: 52px;
+		justify-content: space-between;
+
+		&-link {
+			display: flex;
+			@include square(10px);
+			border-radius: 3px;
+			background-color: $grey-bullets;
+
+			&.active, &:hover, &:focus {
+				background-color: $corp-cyan;
+			}
+		}
+	}
+
+	&__caption {
+
+		.sh-section__text-title {
+			margin-bottom: 20px;
+		}
+
+		.sh-section__text {
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+	&__controls {
+		display: inline-flex;
+		justify-content: space-between;
+		width: 130px;
+	}
+
+	&__controls-link {
+		@include square(50px);
+		border-radius: 3px;
+		background-color: $white;
+		box-shadow: 2px 2px 2px rgba($black, .1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: $transition;
+
+		&:hover {
+			background-color: $cyan-light;
+		}
+	}
+
+}

@@ -80,7 +80,7 @@ $pt: 60px;
 		width: 100%;
 		min-width: 230px;
 		letter-spacing: 2px;
-		transition: all .3s ease;
+		transition: $transition;
 
 		&:hover {
 			background-color: $corp-cyan;
