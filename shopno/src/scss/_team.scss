@@ -1,7 +1,9 @@
 .sh-team {
 
 	.sh-works__gallery {
-		height: 910px;
+		@include lg-screen {
+			height: 910px;
+		}
 	}
 
 	.sh-works__link {

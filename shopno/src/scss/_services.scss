@@ -10,26 +10,71 @@
 		flex-wrap: wrap;
 		margin: 0 -15px;
 		justify-content: space-between;
-		height: 1187px;
+
+		@include lg-screen {
+			height: 1187px;
+		}
 	}
 
 	&__item {
 		height: fit-content;
 
+		@include md-screen-max {
+
+			@for $i from 1 through 6 {
+				&:nth-child(#{$i}) {
+					order: $i;
+				}
+			}
+
+			&:nth-child(3) {
+				order: 4;
+			}
+
+			&:nth-child(4) {
+				order: 3;
+			}
+
+			&:nth-child(5) {
+				order: 6;
+			}
+
+			&:nth-child(6) {
+				order: 5;
+			}
+		}
+
 		&.wide {
-			flex-basis: 63%;
+			flex-basis: 100%;
+
+			@include md-screen {
+				flex-basis: 63%;
+			}
 		}
 
 		&.thin {
-			flex-basis: 35.2%;
+			flex-basis: 100%;
+
+			@include md-screen {
+				flex-basis: 35.2%;
+			}
 		}
 	}
 
 	&__info {
-		@include padding-hack(380px);
+		@include padding-hack(280px);
 		@include layout {
 			background-color: rgba($black, .7);
 			z-index: 1;
+		}
+		border: 5px solid transparent;
+
+		@include md-screen {
+			@include padding-hack(380px);
+		}
+
+		@include lg-screen {
+			border: none;
 		}
 	}
 
@@ -41,7 +86,11 @@
 		position: absolute;
 		bottom: 0;
 		z-index: 2;
-		padding: 0 65px 50px;
+		padding: 0 15px 50px;
+
+		@include md-screen {
+			padding: 0 65px 50px;
+		}
 	}
 
 	.sh-section__text {
@@ -60,9 +109,13 @@
 		bottom: 0;
 		left: 0;
 		background-color: $cyan-light;
-		padding: 65px;
+		padding: 15px;
 		z-index: 3;
 		transition: $transition;
+
+		@include md-screen {
+			padding: 65px;
+		}
 	}
 
 	&:hover {

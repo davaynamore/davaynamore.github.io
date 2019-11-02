@@ -36,15 +36,19 @@ body {
 	font-family: $title-font;
 	text-align: center;
 	color: $text-dark;
-	font-size: px_to_em(20px);
+	font-size: px_to_em(30px);
 
-	@media all and (min-width: 1200px) {
+	@include md-screen {
 		font-size: px_to_em(45px);
 	}
 }
 
 .sh-section {
-	padding: px_to_em(100px) 0;
+	padding: px_to_em(50px) 0;
+
+	@include lg-screen {
+		padding: px_to_em(100px) 0;
+	}
 
 	&:nth-child(odd) {
 		background-color: $light-grey-bg;
@@ -57,10 +61,14 @@ body {
 	&__title {
 		font-family: $title-font;
 		font-weight: 700;
-		font-size: px_to_em(38px);
+		font-size: px_to_em(30px);
 		text-align: center;
 		text-transform: uppercase;
 		color: $black;
+
+		@include md-screen {
+			font-size: px_to_em(38px);
+		}
 	}
 
 	&__subtitle {
@@ -68,7 +76,11 @@ body {
 		font-size: px_to_em(18px);
 		text-align: center;
 		text-transform: uppercase;
-		margin-bottom: px_to_em(100px);
+		margin-bottom: px_to_em(30px);
+
+		@include lg-screen {
+			margin-bottom: px_to_em(100px);
+		}
 	}
 
 	&__text-title {
@@ -77,6 +89,11 @@ body {
 		font-weight: 700;
 		text-transform: uppercase;
 		margin-bottom: 15px;
+		text-align: center;
+
+		@include lg-screen {
+			text-align: left;
+		}
 	}
 
 	&__text-subtitle {
@@ -86,12 +103,18 @@ body {
 
 	&__text {
 		line-height: 1.8;
+		text-align: center;
+
+		@include lg-screen {
+			text-align: left;
+		}
 	}
 
 	&__know-more {
 		text-transform: uppercase;
 		color: $white;
 		font-size: 16px;
+		display: inline-flex;
 
 		.fas {
 			margin-left: 5px;
@@ -152,6 +175,11 @@ a:active {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		margin-bottom: 30px;
+
+		@include lg-screen {
+			margin-bottom: 0;
+		}
 	}
 
 	&__img {
@@ -213,3 +241,87 @@ a:active {
 	}
 
 }
+
+.map {
+	height: 100vh;
+
+	display: none;
+
+	& > * {
+		height: 150px;
+		border: 2px solid $black;
+	}
+}
+
+// $colors: (
+// 'first': #000,
+// 'second': #f00,
+// 'third': #0f0,
+// 'fourth': #00f,
+// 'fifth': #fff
+// );
+
+// @each $class, $color in $colors {
+// 	.#{$class} {
+// 		background-color: $color;
+// 	}
+// }
+
+.test {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	display: none;
+
+	&__before {
+		$border: 2px solid black;
+		@include square(100px);
+		border: $border;
+		position: relative;
+
+		&:hover {
+			cursor: pointer;
+			background-color: yellow;
+
+			&::before, &::after {
+				content: "";
+			}
+
+			&::before {
+				background-color: red;
+			}
+
+			&::after {
+				background-color: green;
+			}
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: -2px;
+			box-sizing: border-box;
+			display: block;
+			@include square(100px);
+			border: $border;
+		}
+
+		&::before {
+			left: 0;
+			transform: translateX(-100%);
+		}
+
+		&::after {
+			right: 0;
+			transform: translateX(100%);
+		}
+	}
+}
+
+// .test .test__before:hover .test__before::before,
+// .test .test__before:hover .test__before::after {
+
+// }

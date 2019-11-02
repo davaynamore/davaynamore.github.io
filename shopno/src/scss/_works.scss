@@ -3,9 +3,13 @@
 	&__gallery {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: center;
 		margin: 0 -15px;
-		height: 745px;
+
+		@include xl-screen {
+			justify-content: space-between;
+			height: 745px;
+		}
 	}
 
 	&__item {
@@ -18,6 +22,11 @@
 			width: 100%;
 			overflow: hidden;
 			transition: $transition;
+			border: 5px solid transparent;
+
+			@include xl-screen {
+				border: none;
+			}
 
 			&::before {
 				content: "";

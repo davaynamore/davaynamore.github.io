@@ -8,33 +8,6 @@ $pt: 60px;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-
-		// xs-screen
-		@media all and (max-width: 767px) {
-
-		}
-
-		// sm-screen
-		@media all and (min-width: 768px) and (max-width: 991px) {
-
-		}
-
-		// md-screen
-		@media all and (min-width: 992px) and (max-width: 1199px) {
-
-		}
-
-		// lg-screen
-		@media all and (min-width: 1200px) and (max-width: 1919px) {
-
-		}
-
-		// xl-screen
-		@media all and (min-width: 1920px) {
-
-		}
-
-
 	}
 
 	&-inner {
@@ -56,7 +29,14 @@ $pt: 60px;
 .sh-first-screen {
 	min-height: 100vh;
 	padding-top: $pt;
-	background: $grey-bg url("../img/glass.png") no-repeat 78% 85%;
+	background-color: $grey-bg;
+	background-image: none;
+
+	@include xl-screen {
+		background-image: url("../img/glass.png");
+		background-repeat: no-repeat;
+		background-position: 78% 85%;
+	}
 
 	&__header {
 		display: flex;

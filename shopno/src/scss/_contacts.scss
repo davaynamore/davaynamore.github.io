@@ -6,13 +6,22 @@
 		background-repeat: no-repeat;
 		background-position: 0 100%;
 		opacity: .2;
+
+		@include md-screen-max {
+			content: none;
+		}
 	}
 
 	&__wrapper {
 		position: relative;
 		z-index: 2;
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
+
+		@include lg-screen {
+			flex-direction: row;
+			justify-content: space-between;
+		}
 
 		& > * {
 			background-color: rgba($black, .7);
@@ -24,7 +33,12 @@
 		flex-direction: column;
 		padding: 40px 30px;
 		width: 100%;
-		max-width: 55%;
+		margin-bottom: 2rem;
+
+		@include lg-screen {
+			max-width: 55%;
+			margin-bottom: 0;
+		}
 	}
 
 	&__field {
@@ -44,8 +58,8 @@
 
 	&__submit {
 		display: flex;
+		justify-content: center;
 		width: 100%;
-		max-width: 240px;
 		padding: 15px 40px;
 		letter-spacing: 2px;
 		text-transform: uppercase;
@@ -56,6 +70,10 @@
 		font-weight: 700;
 		border: none;
 		border-radius: 1px;
+
+		@include lg-screen {
+			max-width: 240px;
+		}
 	}
 
 	&__adresses {
@@ -64,8 +82,17 @@
 		justify-content: space-between;
 		padding: 20px;
 		width: 100%;
-		max-width: 40%;
 		font-style: normal;
+
+		@include lg-screen {
+			max-width: 40%;
+		}
+	}
+
+	&__adresses-list {
+		@include md-screen-max {
+			margin-bottom: 1rem;
+		}
 	}
 
 	&__adresses-item {
