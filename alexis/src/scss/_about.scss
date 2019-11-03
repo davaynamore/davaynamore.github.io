@@ -1,0 +1,40 @@
+.al-about {
+
+	.container {
+		position: relative;
+	}
+
+	.img-wrapper {
+		width: 100%;
+		max-width: 50%;
+		padding-top: 714px;
+	}
+
+	&__caption {
+		width: 100%;
+		max-width: 60%;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: $white;
+		padding: 80px;
+		box-shadow: 2px -2px 20px rgba($black, 0.1);
+	}
+
+	.al-section__title {
+		&::before {
+			content: "01";
+		}
+	}
+
+	.al-section__line {
+		display: flex;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+	}
+
+}
+

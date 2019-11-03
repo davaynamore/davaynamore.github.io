@@ -1,0 +1,101 @@
+$base-size: 15px;
+
+@function px_to_rem($target, $context: $base-size) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0rem;
+}
+
+@function px_to_em($target, $context: $base-size) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0em;
+}
+
+@mixin padding-hack($padding: 100px, $object-fit: contain) {
+	position: relative;
+	padding-top: $padding;
+	@content;
+
+	& > img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: $object-fit;
+	}
+}
+
+$z-index: (
+	navbar: 1,
+	content: 2
+);
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
+
+@mixin square($size) {
+	width: $size;
+	height: $size;
+}
+
+@mixin overlay {
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		@content;
+	}
+}
+
+@mixin media-hidden {
+	@media only screen and (max-width: 319px) {
+		display: none;
+	}
+}
+
+@mixin xs-screen {
+	@media only screen and (max-width: 575px) {
+		@content;
+	}
+}
+
+@mixin sm-screen {
+	@media only screen and (min-width: 576px) {
+		@content;
+	}
+}
+
+@mixin md-screen {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin md-screen-max {
+	@media only screen and (max-width: 991px) {
+		@content;
+	}
+}
+
+@mixin lg-screen {
+	@media only screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin xl-screen {
+	@media only screen and (min-width: 1200px) {
+		@content;
+	}
+}

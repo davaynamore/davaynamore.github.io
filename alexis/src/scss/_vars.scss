@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
+
+$main-font: 'Poppins', sans-serif;
+$secondary-font: 'Libre Baskerville', serif;
+$sign-font: 'Sacramento', cursive;
+
+
+$black: #000;
+$white: #fff;
+$orange: #fc5f45;
+
+$text-color: #616161;
+
+$white-bg: $white;
+$grey-bg: #f7f7f7;
+$dark-bg: #3f4049;
+$orange-logo: $orange;
+$menu-color: #272727;
+
+// $bg-header: #3f4049;
+
+$cyan-text: #38c695;
+$violet-text: #8b66bd;
+$yellow-text: #e4a85d;
+
+// $yellow: #feb960;
+
+// $orange-text: #feb960;
+
+
+// $pink-text: #d9aca5;
+
+// $bg-text: #f6f6f6;
+// $gradient-start-color: #cccccc;
+
+// $section-grey-text: #616161;
+// $even-section-bg: #f7f7f7;
+// $section-title: #313131;
+// $work-steps-nums: #e0e0e0;
+
+$transition: all .3s ease;
+
+// colors-map
+$header-colors: (
+	1: $cyan-text,
+	2: $violet-text,
+	3: $yellow-text
+);
+
+$about-colors: (
+	1: $orange,
+	2: $cyan-text,
+	3: $violet-text,
+	4: $yellow-text
+);

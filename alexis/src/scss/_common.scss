@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100vh;
+}
+
+body {
+	font-size: $base-size;
+	font-family: $main-font;
+	color: $text-color;
+}
+
+.al-dark-bg {
+	background-color: $dark-bg;
+}
+
+.al-section:nth-child(3n+1) {
+	background-color: $white-bg;
+
+	& + .al-section {
+		background-color: $grey-bg;
+
+		& + .al-section {
+			@extend .al-dark-bg;
+		}
+	}
+}
+
+.al-section {
+	padding: 140px 0;
+
+	&__title {
+		font-size: px_to_rem(50px);
+		font-family: $secondary-font;
+		font-weight: 700;
+		text-transform: capitalize;
+		margin-bottom: 35px;
+		position: relative;
+
+		&::before {
+			font-family: $main-font;
+			font-weight: 700;
+			font-size: 274px;
+			position: absolute;
+			opacity: .1;
+			top: 0;
+			left: 0;
+			transform: translate(-30%, -40%);
+		}
+	}
+
+	&__text {
+		line-height: 1.8;
+		margin-bottom: 1rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__line {
+		& > * {
+			width: 25%;
+		}
+
+		@each $i, $color in $about-colors {
+			& > *:nth-child(#{$i}) {
+				border-bottom: 3px solid $color;
+			}
+		}
+	}
+}
+
+.img-wrapper {
+	@include padding-hack();
+}
+
+ul {
+	display: flex;
+	list-style: none;
+	li {
+		a {
+			display: flex;
+			text-decoration: none;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $text-color;
+}
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.flex-container {
+	display: flex;
+}
+
+.al-logo {
+	font-family: $sign-font;
+	font-size: px_to_rem(35px);
+	text-transform: capitalize;
+	font-weight: 700;
+
+	&::first-letter {
+		color: $orange-logo;
+		text-transform: uppercase;
+	}
+}
+

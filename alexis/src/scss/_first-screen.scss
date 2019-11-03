@@ -1,0 +1,137 @@
+.al-first-screen {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	.flex-container {
+		flex-direction: column;
+		align-items: center;
+		height: 70%;
+		justify-content: space-around;
+	}
+
+	&__header {
+		flex-grow: 1;
+		max-height: 70px;
+	}
+
+	&__banner {
+		flex-grow: 10;
+		display: flex;
+
+		.container {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		font-family: $secondary-font;
+		font-size: px_to_em(60px);
+		text-align: center;
+		color: $white;
+	}
+
+	&__anchor {
+		--color: #{$white};
+		--bg: #{$orange};
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		max-width: 180px;
+		background-color: var(--bg);
+		color: var(--color);
+		transition: $transition;
+		padding: 7px 0;
+		border-radius: 25px;
+		text-transform: uppercase;
+		font-size: px_to_rem(16px);
+
+		&:hover {
+			--color: #{$orange};
+			--bg: #{$white};
+		}
+	}
+
+	&__list {
+		justify-content: space-around;
+		width: 100%;
+	}
+
+	&__item {
+		flex-basis: 30%;
+
+		@each $i, $color in $header-colors {
+			&:nth-child(#{$i}) {
+				.al-first-screen__caption {
+					color: $color;
+				}
+			}
+		}
+
+	}
+
+
+
+	&__figure {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+	}
+
+	&__img {
+		margin-bottom: 1rem;
+	}
+
+	&__caption {
+		text-transform: uppercase;
+	}
+
+}
+
+.al-header {
+	padding: 10px 0;
+	background-color: $white;
+
+	&__navigation {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__menu {
+		width: 100%;
+		max-width: 65%;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__menu-link {
+		--color: #{$menu-color};
+		text-transform: capitalize;
+		font-size: px_to_rem(14px);
+		transition: $transition;
+		color: var(--color);
+		position: relative;
+		font-weight: 700;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			display: block;
+			border-bottom: 2px solid var(--color);
+			transition: width .3s ease;
+			width: 0;
+		}
+
+		&:hover {
+			--color: #{$orange-logo};
+
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
