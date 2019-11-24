@@ -1,0 +1,26 @@
+.main-nav {
+	border-top: 1px solid $grey-border;
+
+	.nav-item:last-child .nav-link {
+		border: none;
+	}
+
+	.nav-item {
+		&.active {
+
+			.nav-link {
+				color: $light-blue;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.nav-link {
+		display: flex;
+		justify-content: center;
+		font-weight: bold;
+		text-transform: capitalize;
+		padding: 20px 15px;
+		border-right: 1px solid $grey-border;
+	}
+}

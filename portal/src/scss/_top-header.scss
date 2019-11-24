@@ -1,0 +1,57 @@
+.top-header {
+	padding: 50px 0;
+
+	&__logo {
+		display: inline-flex;
+	}
+}
+
+.contacts-nav {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+
+	&__item {
+
+		.contacts-nav__link {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: $transition;
+			@include square(42px);
+			color: lighten($middle-grey, 20%);
+			font-size: 1.5rem;
+
+			.fas {
+				pointer-events: none;
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				height: 25px;
+				width: 0;
+				border-left: 1px solid $grey-border;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: -50%;
+				pointer-events: none;
+				cursor: auto;
+			}
+
+			&:hover {
+				color: $light-blue;
+			}
+		}
+
+		&:last-child {
+			.contacts-nav__link {
+				&::after {
+					content: none;
+				}
+			}
+		}
+	}
+}

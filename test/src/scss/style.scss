@@ -29,3 +29,69 @@ $color: yellow;
 	}
 }
 
+.works {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	padding: 0;
+	
+	@include md-screen {
+		padding: 0;
+	}
+
+	&__list {
+		display: flex;
+
+		&-item {
+			position: relative;
+				margin-right: 3px;
+				margin-bottom: 3px;
+
+
+			&:last-child {
+				margin-right: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		&-link {
+			font-size: 0;
+		}
+		
+		&-caption {
+			text-transform: uppercase;
+			color: white;
+			position: absolute;
+			left: 5px;
+			bottom: 5px;
+			font-size: px_to_rem(10px);
+
+			@include md-screen {
+				left: 20px;
+				bottom: 20px;
+				font-size: px_to_rem(25px);
+			}
+		}
+	}
+
+
+	&__img {
+		width: 100%;
+		object-fit: cover;
+		transition: all .3s ease;
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+
+	a:link,     /* unvisited link */
+	a:visited,  /* visited link */
+	a:hover,  /* mouse over link */
+	a:active {
+		text-decoration: none;
+		color: white;
+	}
+}
