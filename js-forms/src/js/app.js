@@ -8,7 +8,7 @@
 console.log('string' + 'uppercase');
 
 // String - 'string' + 1 // '2' + 2 = '22' // '2' - 2 = 0 //
-// Number -
+// Number - 
 // Boolean - true / false
 // Undefined
 // Object
@@ -22,12 +22,16 @@ function handelSubmit(event) {
 
 	const data = {};
 
-	for(let i = 0; i < form.elements.length; i++) {
-		if (form.elements[i].name === 'submit') {
-			continue;
-		}
-		data[form.elements[i].name] = form.elements[i].value;
-	}
+	// for(let i = 0; i < form.elements.length; i++) {
+	// 	if (form.elements[i].name === 'submit') {
+	// 		continue;
+	// 	}
+	// 	data[form.elements[i].name] = form.elements[i].value;
+	// }
+
+	Array.from(form.elements).forEach(el => {
+		if (el.name !== 'submit') return data[el.name] = el.value;
+	});
 
 	function getStatus(age) {
 
