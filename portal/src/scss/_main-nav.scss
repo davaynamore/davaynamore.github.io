@@ -6,11 +6,38 @@
 	}
 
 	.nav-item {
+		position: relative;
+
+		.nav-link {
+
+			&::before {
+				$size: 10px;
+				display: block;
+				position: absolute;
+				bottom: 0;
+				border: $size solid transparent;
+				border-right-width: $size * 1.5;
+				border-left-width: $size * 1.5;
+				border-bottom-color: currentcolor;
+			}
+
+			&:hover {
+
+				&::before {
+					content: "";
+				}
+			}
+		}
+
 		&.active {
 
 			.nav-link {
 				color: $light-blue;
 				text-transform: uppercase;
+
+				&::before {
+					content: "";
+				}
 			}
 		}
 	}
