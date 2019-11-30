@@ -1,7 +1,7 @@
 <% animals.forEach(animal => { %>
 <div class="col-6">
 	<div class="about__card">
-		<img class="about__card-img" src="https://loremflickr.com/g/100/100/<%= animal.img %>" alt="">
+		<img class="about__card-img" src="<%= blocks.imgholder %>100/100/<%= animal.img %>" alt="">
 		<div class="about__card-texts">
 			<h3 class="about__card-title"><%= animal.title %></h3>
 			<p class="about__card-text"><%= animal.text %></p>

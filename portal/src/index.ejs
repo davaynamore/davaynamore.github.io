@@ -1,6 +1,7 @@
-<% layout('./view/layout/page') -%>
-<% block('title', 'Page title'); -%>
+<%-partial('./view/partials/common/vars') %>
 
+<% layout('./view/layout/page') -%>
+<% block('title', blocks.homepagetitle); -%>
 
 
 <%-partial('./view/partials/sections/top-nav') %>

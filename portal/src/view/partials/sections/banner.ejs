@@ -1,4 +1,4 @@
-<% const arr = ['paris','dog','plane'] %>
+<% const arr = ['animals','people','nature'] %>
 
 <section class="banner">
 	<div class="container">
@@ -17,9 +17,9 @@
 						<% let className = 'carousel-item' %>
 						<% if (index === 0) className += ' active' %>
 						<div class="<%= className %>" data-interval="10000">
-							<img src="https://loremflickr.com/g/300/100/<%= el %>" class="d-block w-100" alt="...">
+							<img src=" <%= blocks.imgholder %>/300/100/<%= el %>" class="d-block w-100" alt="...">
 							<div class="carousel-item__review">
-								<img class="carousel-item__review-img" src="https://loremflickr.com/g/50/50/<%= el %>" class="d-block w-100" alt="...">
+								<img class="carousel-item__review-img" src="<%= blocks.imgholder %>/50/50/<%= el %>" class="d-block w-100" alt="...">
 								<span class="carousel-item__review-text">like</span>
 							</div>
 						</div>
