@@ -4,6 +4,9 @@ $middle-grey: #808080;
 $grey: #eceef4;
 $grey-border: #dee0e6;
 
+$circle-grey: lighten($middle-grey, 40%);
+$portfolio-grey: $circle-grey;
+
 $fb-color: #2b75b2;
 $google-color: #dd4070;
 $insta-color: #26658e;

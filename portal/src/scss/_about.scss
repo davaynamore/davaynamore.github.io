@@ -1,26 +1,7 @@
 .about {
-	padding-top: 20px;
+	padding: 20px 0 100px;
 
 	&__card {
-		display: flex;
-
-		&-img {
-			flex-shrink: 0;
-			max-height: 125px;
-		}
-
-		&-texts {
-			padding: 15px 20px;
-		}
-
-		&-title {
-			font-size: 26px;
-			font-weight: bold;
-			margin-bottom: 20px;
-		}
-
-		&-text {
-			text-align: justify;
-		}
+		@include card;
 	}
 }

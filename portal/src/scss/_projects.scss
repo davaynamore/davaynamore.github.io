@@ -1,0 +1,33 @@
+.projects {
+	@include circle-section($circle-grey);
+
+	&__top {
+		@include section-title;
+	}
+
+	&__filter {
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+	}
+
+	&__filter-item {
+
+	}
+
+	&__filter-btn {
+		$color: lighten($middle-grey, 20%);
+		min-width: 100px;
+		background: none;
+		color: $color;
+		border-color: $color;
+		text-transform: capitalize;
+
+		&.current,
+		&:hover {
+			border-color: $white;
+			background-color: $white;
+			color: darken($middle-grey, 20%);
+		}
+	}
+}

@@ -14,8 +14,8 @@
 				<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<% arr.forEach(function(el, index){ %>
-						<% let className = 'carousel-item' %>
-						<% if (index === 0) className += ' active' %>
+						<% let className = 'carousel-item'; %>
+						<% if (index === 0) className += ' active'; %>
 						<div class="<%= className %>" data-interval="10000">
 							<img src=" <%= blocks.imgholder %>/300/100/<%= el %>" class="d-block w-100" alt="...">
 							<div class="carousel-item__review">
@@ -23,7 +23,7 @@
 								<span class="carousel-item__review-text">like</span>
 							</div>
 						</div>
-						<% }) %>	
+						<% }) %>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -1,0 +1,40 @@
+<% const works = [
+	{
+		title: 'Web Design & Development',
+		text: 'ISAMA Pvt. Ltd. designs and develops creative websites utilizing the latest technologies.'
+	},
+	{
+		title: 'Mobile Applications',
+		text: 'Our Developers helps you to Design, Develop & Distribute Mobile Applications - Smarter & Faster.'
+	},
+	{
+		title: 'Software Solutions',
+		text: 'with our software for professional services and consulting firms. Grow your revenue and profit margins by assigning the right people to the right projects at the right time.'
+	},
+	{
+		title: 'Interior Design',
+		text: 'We offer a variety of design services ranging from Full Service Interior Design and Styling to our Design Concierge service, all of which are executed with beautiful, custom-tailored results.'
+	},
+	{
+		title: 'Branding',
+		text: 'We have our forte in advertising and Brand establishment. We create identities for the clients product and services in the target market.'
+	},
+	{
+		title: 'SEO & Web Marketing Services',
+		text: 'We offer a variety of design services ranging from Full Service Interior Design and Styling to our Design Concierge service, all of which are executed with beautiful, custom-tailored results.'
+	}
+
+]%>
+
+
+<% works.forEach(work => { %>
+<div class="col-6 portfolio__item">
+	<div class="portfolio__card">
+		<img class="portfolio__card-img" src="<%= blocks.imgholder %>75/75/any" alt="">
+		<div class="portfolio__card-texts">
+			<h3 class="portfolio__card-title"><%= work.title %></h3>
+			<p class="portfolio__card-text"><%= work.text %></p>
+		</div>
+	</div>
+</div>
+<%})%>

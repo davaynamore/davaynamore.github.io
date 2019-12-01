@@ -1,0 +1,30 @@
+<% const filter = ['all', 'mobile apps', 'identities', 'interior design', 'ui/ux'] %>
+
+<section class="projects">
+	<div class="container">
+		<div class="row justify-content-center mb-70">
+			<div class="col-6">
+				<div class="projects__top">
+					<img class="projects__top-img" src="<%= blocks.imgholder %>75/75/nature" alt="">
+					<div class="projects__top-titles">
+						<h2 class="projects__top-title">Our projects</h2>
+						<h5 class="projects__top-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, aliquid.</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-8">
+				<ul class="projects__filter">
+					<% filter.forEach(function(filterItem, index){ %>
+					<% let className = 'projects__filter-btn' %>
+					<% if (index === 0) className += ' current' %>
+					<li class="projects__filter-item">
+						<button type="button" class="<%= className %> btn btn-light"><%= filterItem %></button>
+					</li>
+					<% }) %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

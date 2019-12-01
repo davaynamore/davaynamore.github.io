@@ -1,0 +1,52 @@
+.portfolio {
+	@include circle-section;
+
+	&::before {
+		border-color: $circle-grey;
+	}
+
+	&__top {
+		@include section-title;
+	}
+
+	&__grid {
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			height: 100%;
+			border-right: 1px solid $portfolio-grey;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+		}
+	}
+
+	&__item {
+		margin-bottom: 90px;
+
+		&:last-child,
+		&:nth-last-child(2) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__card {
+		@include card;
+		padding: 0 50px;
+
+		&-img {
+			max-height: 75px;
+		}
+
+		&-title {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+
+		&-texts {
+			padding: 0 0 0 20px;
+		}
+	}
+}
