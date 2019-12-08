@@ -9,3 +9,12 @@
 @import "about";
 @import "portfolio";
 @import "projects";
+
+.top-nav,
+.top-header,
+.main-nav,
+.banner,
+.about,
+.portfolio {
+	display: none;
+}

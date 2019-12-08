@@ -1,5 +1,7 @@
 <% const filter = ['all', 'mobile apps', 'identities', 'interior design', 'ui/ux'] %>
 
+<% const cards = ['img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8'] %>
+
 <section class="projects">
 	<div class="container">
 		<div class="row justify-content-center mb-70">
@@ -13,7 +15,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row justify-content-center">
+		<div class="row justify-content-center mb-5">
 			<div class="col-8">
 				<ul class="projects__filter">
 					<% filter.forEach(function(filterItem, index){ %>
@@ -25,6 +27,31 @@
 					<% }) %>
 				</ul>
 			</div>
+		</div>
+		<div class="row">
+
+			<% cards.forEach(card => { %>
+				<div class="col-12 col-sm-6 col-md-4 col-lg-3 py-2">
+					<div class="card">
+						<div class="card__img-wrap">
+							<img class="card__img" src="./img/<%= card %>.jpg" alt="">
+						</div>
+						<ul class="card__list">
+							<li class="card__list-item">
+								<a href="#" class="card__list-link">
+									link_1
+								</a>
+							</li>
+							<li class="card__list-item">
+								<a href="#" class="card__list-link">
+									link_2
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			<% }) %>
+
 		</div>
 	</div>
 </section>

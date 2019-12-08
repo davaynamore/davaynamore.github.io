@@ -1,3 +1,9 @@
+import multiply, { sum } from './functions.js';
+import user, { sergey, vova } from './objects.js'
+
+// console.log(myVar);
+// console.log(myVar_2);
+
 $(".contacts-nav__link").hover(function(event){
 	$(this).popover("toggle");
 });
@@ -22,4 +28,43 @@ document.addEventListener('click', (event) => {
 	});
 
 	target.classList.toggle('current');
-})
+});
+
+
+var myVar = 5;
+
+let myVar_2 = 6;
+
+
+
+// console.log(multiply(5, 3));
+
+// console.log(sum(5, 3));
+
+// console.log(user.getAge());
+
+// console.log(sergey.getAge());
+// console.log(vova.getAge());
+
+for (let prop in sergey) {
+	console.log(prop);
+	console.log(sergey[prop]);
+}
+
+[
+	{
+		id: '2',
+		category: 'soft',
+		key4: 'value'
+	},
+	{
+		id: '2',
+		category: 'hard',
+		key4: 'value'
+	},
+	{
+		id: '2',
+		category: 'soft',
+		key4: 'value'
+	},
+]
