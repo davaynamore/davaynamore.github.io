@@ -271,7 +271,7 @@ h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
 }
 
 html, body {
-	height: 100%;
+	min-height: 100%;
 }
 
 #cube-loader {
@@ -353,4 +353,11 @@ html, body {
 
 .image-wrapper {
 	@include padding-hack(250px);
+}
+
+
+.cart__label,
+.fa-times-circle,
+.fa-shopping-cart {
+	pointer-events: none;
 }

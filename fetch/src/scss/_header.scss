@@ -1,0 +1,40 @@
+.header {
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.cart {
+	$color: lighten(grey, 15%);
+	display: flex;
+	font-size: 2rem;
+	color: $color;
+	position: relative;
+	background: none;
+	border: none;
+	padding: 20px;
+
+	&:focus {
+		outline: 2px dotted $color;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&__label {
+		$size: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-width: $size;
+		min-height: $size;
+		background-color: orange;
+		font-size: 1rem;
+		color: white;
+		position: absolute;
+		right: 0;
+		transform: scale(.7) translateY(-50%);
+	}
+}

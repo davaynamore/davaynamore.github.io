@@ -1,0 +1,21 @@
+.cart-list {
+	padding: 0;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid black;
+		padding: 10px 20px 10px 10px;
+
+		& > *:not(:last-child) {
+			margin-right: .5rem;
+		}
+	}
+
+	&__img-wrapper {
+		$size: 50px;
+		width: $size;
+		@include padding-hack($size);
+	}
+}

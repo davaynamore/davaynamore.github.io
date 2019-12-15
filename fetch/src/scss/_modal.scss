@@ -1,0 +1,54 @@
+.blur {
+	filter: blur(5px);
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(black, .8);
+	justify-content: center;
+	align-items: center;
+
+	&.open {
+		display: flex;
+	}
+
+	&__body {
+		width: 100%;
+		max-width: 600px;
+		padding: 20px;
+		border-radius: 5px;
+		background-color: white;
+		position: relative;
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: bold;
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	&__products {
+		list-style: none;
+	}
+
+	&__close {
+		$size: 10px;
+		background: none;
+		border: none;
+		padding: $size;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+		position: absolute;
+		top: $size;
+		right: $size;
+	}
+}
