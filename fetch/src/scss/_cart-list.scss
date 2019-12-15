@@ -13,9 +13,61 @@
 		}
 	}
 
+	&__item-title {
+		font-size: 1.2rem;
+		line-height: 1;
+	}
+
+	&__item-quantity {
+		max-width: 50px;
+		text-align: center;
+	}
+
+	&__item-remove {
+		background: none;
+		line-height: 0;
+		color: red;
+		border: 1px solid currentColor;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		font-weight: bold;
+		@include square(20px);
+	}
+
 	&__img-wrapper {
 		$size: 50px;
-		width: $size;
+		min-width: $size;
 		@include padding-hack($size);
 	}
+
+	&.empty-list {
+
+		& ~ .submit-btn,
+		& ~ .clear-btn {
+			display: none;
+		}
+
+		& ~ .cart__empty {
+			display: block;
+			text-align: center;
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+
+		& ~ .cart__total {
+			display: none;
+		}
+	}
+}
+
+.cart__empty {
+	display: none;
+}
+
+.cart__total {
+	text-align: right;
+	font-weight: bold;
 }

@@ -40,36 +40,21 @@
 			<button class="modal__close">
 				<i class="far fa-times-circle"></i>
 			</button>
-		</span>
-		<h2 class="modal__title">Cart</h2>
-		<form>
-			<ul class="modal__products cart-list">
-<!-- 				<li>
-					<div class="cart-list__item">
-						<input type="hidden" value="1" name="articul">
-						<div class="cart-list__img-wrapper">
-							<img class="cart-list__item-img" src="img/cat-item1.jpg" alt="">
-						</div>
-						<h4 class="cart-list__item-title">Product</h4>
-						<span class="cart-list__item-price">
-							<span class="cart-list__item-currency">$</span>
-							100
-						</span>
-						<input type="number" name="quantity" class="cart-list__item-quantity" value="1">
-						<span class="cart-list__item-total">100</span>
-					</div>
-				</li> -->
-			</ul>
-
-			<input type="submit" value="Buy">
-		</form>
+			<h2 class="modal__title">Cart</h2>
+			<form class="modal__form">
+				<ul class="modal__products cart-list"></ul>
+				<p class="cart__total">0</p>
+				<p class="cart__empty">Your cart is empty</p>
+				<input type="submit" value="Buy" class="btn btn-primary submit-btn">
+				<input type="button" value="Clear cart" class="btn btn-warning clear-btn">
+			</form>
+		</div>
 	</div>
-</div>
 
-<script src="https://kit.fontawesome.com/3104291314.js" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="js/bundle.js"></script>
+	<script src="https://kit.fontawesome.com/3104291314.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/bundle.js"></script>
 </body>
 </html>
