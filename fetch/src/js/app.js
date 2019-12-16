@@ -71,6 +71,6 @@ document.addEventListener(productsReadyEventName, () => {
 });
 
 cartForm.addEventListener('change', (event) => {
-	changeProductPrice(event.target);
+	changeProductQuantity(event.target);
 	renderCart(getCartItems(getCartValue(), Storage.get('products')));
 });
