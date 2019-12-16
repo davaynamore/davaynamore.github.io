@@ -4,7 +4,7 @@ export const getCartValue = () => {
 	const label = document.querySelector('.cart__label');
 	const cartValue = Storage.get('cart');
 
-	if (!Object.keys(cartValue).length) {
+	if (!cartValue || !Object.keys(cartValue).length) {
 		label.innerText = 0;
 		return {};
 	}
