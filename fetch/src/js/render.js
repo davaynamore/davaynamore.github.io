@@ -55,7 +55,7 @@ const createProductItem = ({ currency, description, id, img_url, price, title })
 	return col;
 }
 
-const createCartItem = ({id, title, img_url, price, currency, total}) => {
+const createCartItem = ({ id, title, img_url, price, currency, total }) => {
 
 	const listItem = generateElement('li');
 	const productItem = generateElement('div', 'cart-list__item');
@@ -78,14 +78,14 @@ const createCartItem = ({id, title, img_url, price, currency, total}) => {
 	productQuantity.setAttribute('name', 'quantity');
 	productQuantity.setAttribute('value', total);
 
-	const wrappedProductItems = [productArticul, imgWrapper, productTitle, productPrice, productQuantity, productTotalPrice, productRemove];
-
 	productTitle.innerText = title;
 	productPrice.innerText = currency + price;
 	productTotalPrice.innerText = `${currency}${+price * +total}`;
 	productRemove.innerText = '-';
 
+	const wrappedProductItems = [productArticul, imgWrapper, productTitle, productPrice, productQuantity, productTotalPrice, productRemove];
 	insertElementIntoParent(wrappedProductItems, productItem);
+
 	imgWrapper.appendChild(productImg);
 	listItem.appendChild(productItem);
 
@@ -101,7 +101,7 @@ export const renderProducts = (products) => {
 }
 
 export const renderCart = (products) => {
-	const grid = document.querySelector('.cart-list');	
+	const grid = document.querySelector('.cart-list');
 	const emptyMsg = document.querySelector('.cart__empty');
 	const total = document.querySelector('.cart__total');
 
@@ -113,13 +113,16 @@ export const renderCart = (products) => {
 		return grid.classList.add('empty-list');
 	} else {
 		grid.classList.remove('empty-list');
-	}	
+	}
+
+	let currency;
 
 	products.forEach(product => {
+		currency = product.currency;
 		grid.appendChild(createCartItem(product));
 	});
 
-	total.innerText = getTotalSum();
+	total.innerText = `Total: ${currency}${getTotalSum()}`;
 }
 
 export const renderSuccessMsg = () => {

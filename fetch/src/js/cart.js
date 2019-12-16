@@ -9,8 +9,8 @@ export const getCartValue = () => {
 		return {};
 	}
 
-	const valuesSum = Object.values(cartValue).reduce((acc, cur) => +acc + +cur);
-	label.innerText = valuesSum;
+	label.innerText = Object.values(cartValue).reduce((acc, cur) => +acc + +cur);
+
 	return cartValue;
 }
 
@@ -63,7 +63,7 @@ export const changeProductQuantity = (target) => {
 	const cart = getCartValue();
 	const productsList = Storage.get('products');
 	const chosenProduct = productsList.filter(element => element.id == productId)[0];
-	
+
 	if (cart[chosenProduct.id]) {
 		cart[chosenProduct.id] = newQuantity;
 	}
@@ -75,7 +75,7 @@ export const changeProductQuantity = (target) => {
 export const removeProductFromCart = (target) => {
 	const cart = getCartValue();
 	const productId = target.getAttribute('data-id');
-	
+
 	delete cart[productId];
 
 	Storage.set('cart', cart);

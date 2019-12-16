@@ -7,7 +7,6 @@ import { modalOpenHandler, modalCloseHandler } from './modal';
 const productsReadyEventName = 'products_ready';
 let productsReadyEvent = new Event(productsReadyEventName);
 
-const loader = document.querySelector('#cube-loader');
 const cartForm = document.querySelector('.modal__form');
 
 getProducts('https://my-json-server.typicode.com/davaynamore/fakeserver/db')
@@ -65,6 +64,7 @@ document.addEventListener('click', (event) => {
 });
 
 document.addEventListener(productsReadyEventName, () => {
+	const loader = document.querySelector('#cube-loader');
 	renderProducts(Storage.get('products'));
 	getCartValue();
 	loader.classList.add('hidden');
