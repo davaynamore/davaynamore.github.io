@@ -1,0 +1,85 @@
+html, body {
+	min-height: 100vh;
+}
+
+body {
+	color: black;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+
+.carousel {
+	padding: 50px 0;
+	text-transform: uppercase;
+	font-weight: 900;
+
+	&_title {
+		margin: 0 0 100px;
+		font-size: 86px;
+		line-height: 1;
+	}
+
+	&_text {
+		margin-bottom: 30px;
+	}
+}
+
+.owl-dots {
+	display: flex;
+	justify-content: space-between;
+	width: 15%;
+	margin: auto;
+	padding-top: 20px;
+}
+
+.owl-carousel button.owl-dot {
+	$size: 20px;
+	background-color: black;
+	display: flex;
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	border: 1px solid black;
+
+	&.active {
+		background-color: white;
+	}
+}
+
+.owl-nav {
+	position: absolute;
+	top: 40%;
+	width: 100%;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next, {
+	position: absolute;
+	font-size: 50px;
+	border: 1px solid currentColor;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	line-height: 0;
+	outline: transparent;
+}
+
+$position: 150px;
+
+.owl-carousel .owl-nav button.owl-prev {
+	left: -#{$position};
+}
+
+.owl-carousel .owl-nav button.owl-next {
+	right: -#{$position};
+}
+
+
+.img-wrapper {
+	@include padding-hack(353.31px);
+	background: grey url('../img/default.png') no-repeat 0 0;
+	background-size: cover;
+}
