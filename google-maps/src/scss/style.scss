@@ -1,0 +1,50 @@
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	position: relative;
+}
+
+#map {
+	width: 100%;
+	min-height: 100vh;
+	max-height: 100%;
+}
+
+#directionsPanel {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	padding: 1rem 0;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	z-index: 100;
+
+	* {
+		padding: 10px;
+		margin-right: .5rem;
+		background-color: rgba(white, .8);
+		border: 1px solid rgba(black, .8);
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+img[src*="marker.svg"] {
+	$size: 50px;
+	width: $size;
+	height: $size;
+	max-width: $size;
+	max-height: $size;
+}
