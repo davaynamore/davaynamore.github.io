@@ -1,0 +1,50 @@
+.todo {
+
+  &__title {
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+  }
+
+  &__filter {
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    padding: 0;
+  }
+
+  &__label {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem 1.25rem;
+  }
+
+  &__input {
+    margin-right: 1rem;
+
+    &:checked + * {
+      text-decoration: line-through;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__counter {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0;
+  }
+}
