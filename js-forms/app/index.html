@@ -9,7 +9,7 @@
 </head>
 <body class="body">
 
-	<form class="form" id="form">
+<!-- 	<form class="form" id="form">
 		<label for="name">Ваше имя:
 			<input id="name" type="text" placeholder="Type your name" name="name" value="Tanya">
 		</label>
@@ -28,8 +28,37 @@
 			<span class="answer"></span>
 		</div>
 
-	</form>
+	</form> -->
 
+	<form class="contact-form">
+		<div>
+			<label class="contact-form__label">
+				<input class="contact-form__input" type="text" name="fistName" required>
+			</label>
+		</div>
+		<div>
+			<label class="contact-form__label">
+				<input class="contact-form__input" type="text" name="secondName" required>
+			</label>
+		</div>
+		<div>
+			<label class="contact-form__label">
+				<input class="contact-form__input" type="email" name="email" required>
+			</label>
+		</div>
+		<div>
+			<label class="contact-form__label">
+				<textarea name="comment" required></textarea>
+			</label>
+		</div>
+		<div>
+			<label class="contact-form__label">
+				<input type="checkbox" required  name="checkbox">
+				Terms and conditions
+			</label>
+		</div>
+		<input class="contact-form__submit" type="submit" name="submit" value="Submit">
+	</form>
 
 
 	<script src="js/bundle.js"></script>
